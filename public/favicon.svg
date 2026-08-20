@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B" />
+      <stop offset="100%" stop-color="#09090B" />
+    </linearGradient>
+    
+    <linearGradient id="nGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#D4D4D8" />
+    </linearGradient>
+    
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A391AF" />
+      <stop offset="100%" stop-color="#81708F" />
+    </linearGradient>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded canvas -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" />
+  <rect width="62" height="62" x="1" y="1" rx="15" fill="none" stroke="#81708F" stroke-opacity="0.35" stroke-width="1.5" />
+
+  <!-- Modern Stylized "N" Monogram -->
+  <g filter="url(#glow)">
+    <!-- Left Vertical Stem -->
+    <path d="M17 18 C17 16.34 18.34 15 20 15 L23 15 C24.66 15 26 16.34 26 18 L26 46 C26 47.66 24.66 49 23 49 L20 49 C18.34 49 17 47.66 17 46 Z" fill="url(#nGrad)" />
+    
+    <!-- Diagonal Dynamic Stroke -->
+    <path d="M22 17.5 L43 45.5 C43.8 46.5 45.2 47 46.5 46.5 C47.4 46.1 48 45.1 48 44 L48 41 L27 15.5 C26.2 14.5 24.8 14 23.5 14.5 C22.6 14.9 22 15.9 22 17.5 Z" fill="url(#accentGrad)" />
+    
+    <!-- Right Vertical Stem -->
+    <path d="M38 18 C38 16.34 39.34 15 41 15 L44 15 C45.66 15 47 16.34 47 18 L47 46 C47 47.66 45.66 49 44 49 L41 49 C39.34 49 38 47.66 38 46 Z" fill="url(#nGrad)" />
+    
+    <!-- Japanese-inspired spark / dot accent -->
+    <circle cx="48" cy="16" r="3.5" fill="#81708F" />
+  </g>
+</svg>
