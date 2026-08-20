@@ -79,6 +79,7 @@ export function Contact() {
                 <input 
                   type="text" 
                   id="name" 
+                  name="name"
                   required
                   className="w-full bg-transparent border-b border-zinc-800 pb-3 pt-2 text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
                   placeholder="Jane Doe"
@@ -89,6 +90,7 @@ export function Contact() {
                 <input 
                   type="email" 
                   id="email" 
+                  name="email"
                   required
                   className="w-full bg-transparent border-b border-zinc-800 pb-3 pt-2 text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
                   placeholder="jane@example.com"
@@ -102,6 +104,7 @@ export function Contact() {
                 <input 
                   type="tel" 
                   id="phone" 
+                  name="phone"
                   className="w-full bg-transparent border-b border-zinc-800 pb-3 pt-2 text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
                   placeholder="(123) 456-7890"
                 />
@@ -111,6 +114,7 @@ export function Contact() {
                 <input 
                   type="date" 
                   id="date"
+                  name="wedding_date"
                   className="w-full bg-transparent border-b border-zinc-800 pb-3 pt-2 text-white font-light focus:outline-none focus:border-[#81708F] transition-colors [&::-webkit-calendar-picker-indicator]:invert-[0.8]"
                 />
               </div>
@@ -120,6 +124,7 @@ export function Contact() {
               <label htmlFor="project" className="block text-xs font-mono tracking-widest text-zinc-400 uppercase">Tell us about your wedding / project *</label>
               <textarea 
                 id="project" 
+                name="project_details"
                 required
                 rows={4}
                 className="w-full bg-transparent border-b border-zinc-800 pb-3 pt-2 text-white font-light focus:outline-none focus:border-[#81708F] transition-colors resize-none"
