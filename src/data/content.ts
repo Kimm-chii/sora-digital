@@ -37,7 +37,7 @@ export const siteContent = {
         name: "Wedding Websites",
         role: "Event & Celebration",
         tags: ["💍 Intro", "✉️ Invitations"],
-        image: "/src/assets/images/service_wedding_web_1787208285576.webp",
+        image: "/images/service_wedding_web_1787208285576.webp",
         bio: "Elegant, personalized wedding websites complete with interactive intro animation, your story, and event details.",
       },
       {
@@ -45,7 +45,7 @@ export const siteContent = {
         name: "Business Portfolios",
         role: "Professional & Corporate",
         tags: ["💼 Case Studies", "📈 SEO"],
-        image: "/src/assets/images/service_business_portfolio_1787208363012.jpg",
+        image: "/images/service_business_portfolio_1787208363012.jpg",
         bio: "Sophisticated portfolios designed to showcase your agency's work, highlight your achievements, and attract high-tier clients.",
       },
       {
@@ -53,7 +53,7 @@ export const siteContent = {
         name: "E-Commerce",
         role: "Retail & Brands",
         tags: ["🛒 Storefronts", "💳 Payments"],
-        image: "/src/assets/images/service_ecommerce_site_1787208349510.jpg",
+        image: "/images/service_ecommerce_site_1787208349510.jpg",
         bio: "Seamless shopping experiences that reflect your brand's quality and drive conversions with intuitive design.",
       },
       {
@@ -61,7 +61,7 @@ export const siteContent = {
         name: "Brand Identity",
         role: "Visual Design",
         tags: ["🎨 Logos", "✨ Typography"],
-        image: "/src/assets/images/service_brand_identity_1787208297131.jpg",
+        image: "/images/service_brand_identity_1787208297131.jpg",
         bio: "Comprehensive branding packages including logo design, typography selection, and visual guidelines.",
       }
     ],
@@ -75,7 +75,7 @@ export const siteContent = {
         year: "2026",
         title: "Wedding Invitation",
         description: "An elegant digital wedding invitation featuring a captivating intro animation, beautifully designed venue details, and a seamless event itinerary.",
-        image: "/src/assets/images/project_wedding_invitation_1787208317970.webp",
+        image: "/images/project_wedding_invitation_1787208317970.webp",
         link: "https://k-wedding-bespoke.vercel.app/",
       },
       {
@@ -83,7 +83,7 @@ export const siteContent = {
         year: "2026",
         title: "Bespoke Wedding Rings",
         description: "A luxury e-commerce experience for a bespoke ring designer, designed to elevate product presentation.",
-        image: "/src/assets/images/project_bespoke_rings_1787208330543.jpg",
+        image: "/images/project_bespoke_rings_1787208330543.jpg",
         link: "https://sora-bespoke.vercel.app/",
       }
     ],
