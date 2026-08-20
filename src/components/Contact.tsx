@@ -79,7 +79,7 @@ export function Contact() {
                 <input 
                   type="text" 
                   id="name" 
-                  name="name"
+                  name="full_name"
                   required
                   className="w-full bg-transparent border-b border-zinc-800 pb-3 pt-2 text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
                   placeholder="Jane Doe"
