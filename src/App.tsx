@@ -8,7 +8,9 @@ import { Services } from './components/Services';
 import { Portfolio } from './components/Portfolio';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { Cta } from './components/Cta';
 import { ScrollToTopButton } from './components/ScrollToTopButton';
+import { GrainOverlay } from './components/GrainOverlay';
 import { scrollToSection } from './utils/scroll';
 
 export default function App() {
@@ -44,6 +46,7 @@ export default function App() {
 
   return (
     <div className="bg-[#0A0A0C] min-h-screen text-white selection:bg-zinc-800 selection:text-white relative">
+      <GrainOverlay />
       <AnimatePresence>
         {showIntro && <Intro onComplete={() => setShowIntro(false)} />}
       </AnimatePresence>
@@ -56,6 +59,7 @@ export default function App() {
             <About />
             <Services />
             <Portfolio />
+            <Cta />
           </>
         ) : (
           <Contact />

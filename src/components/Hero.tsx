@@ -4,7 +4,7 @@ import { siteContent } from '../data/content';
 import { scrollToSection } from '../utils/scroll';
 import type { MouseEvent } from 'react';
 
-function HeroSlideImage({ src, index, total }: { src: string; index: number; total: number }) {
+function HeroSlideImage({ src, index, total }: { src: string; index: number; total: number; key?: string }) {
   const [failed, setFailed] = useState(false);
 
   return (

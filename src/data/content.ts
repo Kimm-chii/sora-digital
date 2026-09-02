@@ -12,7 +12,7 @@ export const siteContent = {
     title: "Sora Digital",
     statusBadge: "STATUS: AVAILABLE",
     subtitle: "Custom Web Design & Development - Crafting tailored digital spaces that leave a lasting impression.",
-    credit: "Bespoke Digital Experiences",
+    credit: "Where stories become interfaces",
     backgroundImages: [
       "/images/hero-bg-1.webp",
       "/images/hero-bg-2.webp",
@@ -25,44 +25,44 @@ export const siteContent = {
   },
   about: {
     title: "Our Vision & Approach",
-    description: "We are a boutique digital design agency focused on delivering high-end, bespoke websites. From timeless wedding invitations to elegant business portfolios, we bring your ideas to life with precision and care. We believe in a tailored approach to digital design. Every project begins with a deep understanding of your narrative. We combine editorial aesthetics with cutting-edge web technologies to deliver highly responsive, visually stunning, and purposeful platforms.",
+    description: "We're a boutique digital design studio crafting bespoke websites for businesses, brands, and personal milestones alike, from timeless wedding invitations to elegant business portfolios and beyond. Every project starts with your story, refined through editorial aesthetics and built on modern web technology, so the result feels considered, responsive, and unmistakably yours.",
     image: "/images/about-group.webp",
   },
   services: {
     title: "Services",
-    subtitle: "Comprehensive digital solutions tailored to your unique needs.",
+    subtitle: "Websites designed to make your brand stand out.",
     list: [
       {
         id: 1,
-        name: "Wedding Websites",
-        role: "Event & Celebration",
-        tags: ["💍 Intro", "✉️ Invitations"],
-        image: "/images/service_wedding_web_1787208285576.webp",
-        bio: "Elegant, personalized wedding websites complete with interactive intro animation, your story, and event details.",
+        name: "Business Websites",
+        role: "Corporate & Agency",
+        tags: ["💼 Case Studies", "📈 SEO", "Responsive"],
+        image: "/images/service_business_portfolio_1787208363012.jpg",
+        bio: "Sophisticated portfolios and corporate websites designed to showcase your agency's work, highlight your achievements, and attract high-tier clients."
       },
       {
         id: 2,
-        name: "Business Portfolios",
-        role: "Professional & Corporate",
-        tags: ["💼 Case Studies", "📈 SEO"],
-        image: "/images/service_business_portfolio_1787208363012.jpg",
-        bio: "Sophisticated portfolios designed to showcase your agency's work, highlight your achievements, and attract high-tier clients.",
+        name: "E-Commerce Websites",
+        role: "Retail & Brands",
+        tags: ["🛒 Storefronts", "💳 Payments", "Shopify"],
+        image: "/images/service_ecommerce_site_1787208349510.jpg",
+        bio: "Seamless shopping experiences that reflect your brand's quality and drive conversions with intuitive design."
       },
       {
         id: 3,
-        name: "E-Commerce",
-        role: "Retail & Brands",
-        tags: ["🛒 Storefronts", "💳 Payments"],
-        image: "/images/service_ecommerce_site_1787208349510.jpg",
-        bio: "Seamless shopping experiences that reflect your brand's quality and drive conversions with intuitive design.",
+        name: "Landing Pages",
+        role: "Campaign & Conversion",
+        tags: ["🚀 High Conversion", "✨ Bespoke UI", "Fast Loading"],
+        image: "/images/service_brand_identity_1787208297131.jpg",
+        bio: "Targeted, high-impact landing pages designed to capture attention, communicate value quickly, and drive user action."
       },
       {
         id: 4,
-        name: "Brand Identity",
-        role: "Visual Design",
-        tags: ["🎨 Logos", "✨ Typography"],
-        image: "/images/service_brand_identity_1787208297131.jpg",
-        bio: "Comprehensive branding packages including logo design, typography selection, and visual guidelines.",
+        name: "Wedding & Event Websites",
+        role: "Personal Milestones",
+        tags: ["💍 Intro Animation", "✉️ Invitations", "RSVP"],
+        image: "/images/service_wedding_web_1787208285576.webp",
+        bio: "Elegant, personalized wedding websites complete with interactive intro animation, your story, and event details."
       }
     ],
   },
@@ -89,7 +89,7 @@ export const siteContent = {
     ],
   },
   footer: {
-    text: "Crafting bespoke digital experiences for forward-thinking brands and couples.",
+    text: "Where stories become interfaces — for brands, businesses, and the moments worth celebrating.",
     disclaimer: "Bespoke Digital Experiences - Crafted with precision.",
     socials: [
       { platform: "Instagram", link: "#" },

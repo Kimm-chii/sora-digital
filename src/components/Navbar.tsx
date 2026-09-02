@@ -47,10 +47,10 @@ export function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex items-center ${
+        className={`fixed top-0 left-0 right-0 z-50 transform-gpu transition-[background-color,border-color] duration-300 flex items-center h-[60px] border-b ${
           isScrolled || mobileMenuOpen
-            ? 'h-[60px] bg-[#0A0A0C]/80 backdrop-blur-lg border-b border-white/[0.04]'
-            : 'h-[72px] bg-transparent'
+            ? 'bg-[#0A0A0C]/90 backdrop-blur-lg border-white/[0.04]'
+            : 'bg-transparent border-white/0'
         }`}
       >
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-full">

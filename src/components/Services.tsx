@@ -1,127 +1,135 @@
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
+import { useState } from 'react';
 import { siteContent } from '../data/content';
 import { SafeImage } from './SafeImage';
 
 export function Services() {
   const { services } = siteContent;
-  const servicesList = services.items || services.list || [];
+  const servicesList = services.list || [];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
+  // Open the first item by default, or null if collapsed
+  const [openId, setOpenId] = useState<number | null>(1);
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
-    }
+  const toggleAccordion = (id: number) => {
+    setOpenId(openId === id ? null : id);
   };
 
   return (
-    <section id="services" className="py-24 sm:py-32 bg-[#0E0E10] text-white border-b border-zinc-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
+    <section id="services" className="py-16 sm:py-24 md:py-32 bg-[#0E0E10] text-white border-b border-zinc-900/80 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 space-y-10 sm:space-y-16">
         
-        {/* Section Header */}
+        {/* Header Layout Matching Reference: Left Title Block, Right Description */}
         <motion.div 
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-2xl mx-auto mb-16 sm:mb-20"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 lg:gap-12 items-start lg:items-end pb-6 sm:pb-8 border-b border-zinc-900/80"
         >
-          <h2 
-            className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.05] mb-5 sm:mb-6 uppercase"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
-          >
-            {services.title}
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg text-zinc-400 leading-relaxed max-w-xl mx-auto">
-            {services.subtitle}
-          </p>
-        </motion.div>
-
-        {/* Member Cards with Transparent Text Overlay */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6"
-        >
-          {servicesList.map((service, index) => (
-            <motion.div 
-              key={`service-card-${service.id}-${service.name}-${index}`}
-              variants={itemVariants}
-              className="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden bg-[#161618] border border-zinc-800/80 hover:border-zinc-500 transition-all duration-300 shadow-lg flex flex-col justify-end"
+          <div className="lg:col-span-7 space-y-2 sm:space-y-3">
+            <span className="text-[10px] sm:text-xs font-mono tracking-[0.25em] text-[#81708F] uppercase block">
+              WHAT WE DO
+            </span>
+            <h2 
+              className="text-2xl sm:text-3xl md:text-4xl font-light tracking-wide text-white leading-tight"
+              style={{ fontFamily: "'Outfit', sans-serif" }}
             >
-              {/* Full Background Photo */}
-              <div className="absolute inset-0 z-0">
-                <SafeImage 
-                  src={service.image} 
-                  alt={service.name}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-
-              {/* Multi-Stop Transparent Gradient Overlay */}
-              <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/95 via-black/50 to-transparent pointer-events-none transition-opacity duration-300 group-hover:from-black/80" />
-
-              {/* Text Content Overlay */}
-              <div className="relative z-20 p-5 flex flex-col justify-end h-full pointer-events-none">
-                <div className="mt-auto">
-                  {/* Name */}
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug group-hover:text-zinc-300 transition-colors">
-                    {service.name}
-                  </h3>
-
-                  {/* Role */}
-                  <p className="text-xs sm:text-sm font-medium text-zinc-300 mt-0.5 drop-shadow-md">
-                    {service.role}
-                  </p>
-
-                  {/* Bio */}
-                  {service.bio && (
-                    <p className="text-xs text-zinc-400 font-normal mt-2 leading-relaxed italic border-t border-white/10 pt-2 drop-shadow-md">
-                      {service.bio}
-                    </p>
-                  )}
-
-                  {/* Tags Pill */}
-                  {service.tags && service.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1.5 mt-3">
-                      {service.tags.slice(0, 2).map((tag: string, tagIdx: number) => (
-                        <span 
-                          key={tagIdx}
-                          className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-black/60 backdrop-blur-md text-zinc-200 border border-white/10 shadow-sm"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              {services.subtitle}
+            </h2>
+          </div>
+          <div className="lg:col-span-5">
+            <p className="text-zinc-400 font-light text-xs sm:text-sm md:text-base leading-relaxed">
+              Our boutique studio crafts custom web solutions tailored to your specific needs and goals. Every site is built with modern tech and refined through editorial aesthetics.
+            </p>
+          </div>
         </motion.div>
-        
-        {/* Bottom Marker */}
-        <div className="mt-16 pt-8 border-t border-zinc-900/80 flex items-center justify-between text-xs text-zinc-500">
-          <span className="uppercase tracking-widest font-mono text-[10px]">
-            SORA DIGITAL
-          </span>
-          <span className="font-mono text-[11px] text-[#81708F]">
-            {servicesList.length} OFFERINGS
-          </span>
+
+        {/* Clean Accordion List */}
+        <div className="divide-y divide-zinc-900/80 border-t border-b border-zinc-900/80">
+          {servicesList.map((service, index) => {
+            const isOpen = openId === service.id;
+            const numberStr = String(index + 1).padStart(2, '0');
+
+            return (
+              <div 
+                key={service.id} 
+                className="group py-4 sm:py-6 transition-colors"
+              >
+                {/* Trigger Row */}
+                <button
+                  type="button"
+                  onClick={() => toggleAccordion(service.id)}
+                  className="w-full flex items-center justify-between text-left focus:outline-none cursor-pointer select-none group/btn py-1"
+                >
+                  <div className="flex items-center gap-3 sm:gap-6">
+                    <span className="text-xs sm:text-sm font-mono text-zinc-500 tracking-wider">
+                      {numberStr}.
+                    </span>
+                    <h3 
+                      className="text-lg sm:text-xl md:text-2xl font-light tracking-wide text-white group-hover/btn:text-[#81708F] transition-colors"
+                      style={{ fontFamily: "'Outfit', sans-serif" }}
+                    >
+                      {service.name}
+                    </h3>
+                  </div>
+                  
+                  <div className="flex items-center gap-1.5 text-[10px] sm:text-xs font-mono tracking-[0.15em] sm:tracking-[0.2em] uppercase text-zinc-400 group-hover/btn:text-white transition-colors shrink-0 pl-2">
+                    <span>{isOpen ? 'READ LESS' : 'READ MORE'}</span>
+                  </div>
+                </button>
+
+                {/* Expanded Content Drawer */}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pt-4 sm:pt-6 pb-2 pl-4 sm:pl-10 grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-center">
+                        <div className="md:col-span-8 space-y-3">
+                          <div className="flex items-center gap-3">
+                            <span className="text-[9px] sm:text-[10px] font-mono tracking-widest text-[#81708F] uppercase border border-[#81708F]/30 bg-[#81708F]/10 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full">
+                              {service.role}
+                            </span>
+                          </div>
+                          
+                          <p className="text-zinc-300 font-light text-xs sm:text-sm leading-relaxed max-w-2xl">
+                            {service.bio}
+                          </p>
+
+                          <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
+                            {service.tags && service.tags.map((tag: string) => (
+                              <span 
+                                key={tag} 
+                                className="text-[10px] sm:text-[11px] font-mono text-zinc-400 bg-zinc-900/90 border border-zinc-800/80 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-sm"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Subtle Right Preview Thumbnail */}
+                        <div className="md:col-span-4 h-28 sm:h-32 rounded-lg overflow-hidden border border-zinc-800/60 relative group/img mt-2 md:mt-0">
+                          <SafeImage 
+                            src={service.image} 
+                            alt={service.name} 
+                            className="w-full h-full object-cover grayscale opacity-60 group-hover/img:grayscale-0 group-hover/img:opacity-100 transition-all duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10]/80 via-transparent to-transparent pointer-events-none" />
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
         </div>
+
       </div>
     </section>
   );

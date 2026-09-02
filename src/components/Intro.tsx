@@ -47,10 +47,11 @@ export function Intro({ onComplete }: IntroProps) {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="text-3xl sm:text-5xl md:text-6xl font-light text-white tracking-wider"
+          className="text-3xl sm:text-5xl md:text-6xl font-light text-white tracking-wider text-center px-4 leading-tight"
           style={{ fontFamily: "'Outfit', sans-serif" }}
         >
-          Bespoke <span className="font-semibold text-white">Digital Experiences</span>
+          Bespoke <br className="sm:hidden" />
+          <span className="font-semibold text-white">Digital Experiences</span>
         </motion.h1>
 
         {/* Minimal Animated Divider */}

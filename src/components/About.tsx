@@ -38,18 +38,18 @@ export function About() {
               </p>
               
               {/* Approach List */}
-              <div className="mt-8 flex flex-col gap-4 border-l border-zinc-800 pl-6">
+              <div className="mt-8 flex flex-col gap-5 border-l border-zinc-800 pl-6">
                 <div className="flex flex-col gap-1">
                   <span className="text-xs font-mono tracking-[0.2em] text-white uppercase">Discovery</span>
-                  <span className="text-zinc-500 text-sm font-light">Deep understanding of your narrative.</span>
+                  <span className="text-zinc-400 text-sm font-light">Understanding your narrative before we design a single pixel.</span>
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-xs font-mono tracking-[0.2em] text-white uppercase">Design</span>
-                  <span className="text-zinc-500 text-sm font-light">Editorial aesthetics and high-end visual systems.</span>
+                  <span className="text-zinc-400 text-sm font-light">Editorial aesthetics, high-end visual systems, considered detail.</span>
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-xs font-mono tracking-[0.2em] text-white uppercase">Development</span>
-                  <span className="text-zinc-500 text-sm font-light">Cutting-edge web technologies and performance.</span>
+                  <span className="text-zinc-400 text-sm font-light">Cutting-edge technology, built for performance and precision.</span>
                 </div>
               </div>
             </div>
