@@ -96,7 +96,7 @@ export function Contact() {
                   pattern="[a-zA-Z.\s]+"
                   onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^a-zA-Z.\s]/g, '') }}
                   className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
-                  placeholder="Full Name"
+                  placeholder="e.g. Alex Morgan"
                 />
               </div>
               <div className="space-y-1.5">
@@ -107,7 +107,7 @@ export function Contact() {
                   name="email"
                   required
                   className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
-                  placeholder="youremail@example.com"
+                  placeholder="e.g. alex@example.com"
                 />
               </div>
             </div>
