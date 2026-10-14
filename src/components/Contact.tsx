@@ -29,7 +29,7 @@ export function Contact() {
 
   if (isSuccess) {
     return (
-      <section className="pt-24 pb-12 min-h-screen flex items-center justify-center bg-[#0A0A0C]">
+      <section className="pt-24 pb-12 min-h-[calc(var(--sh,1vh)*100)] flex items-center justify-center bg-[#0A0A0C]">
         <div className="max-w-xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -54,7 +54,7 @@ export function Contact() {
   }
 
   return (
-    <section className="pt-24 pb-12 sm:pt-28 sm:pb-16 min-h-screen flex items-center bg-[#0A0A0C] text-white">
+    <section className="pt-24 pb-12 sm:pt-28 sm:pb-16 min-h-[calc(var(--sh,1vh)*100)] flex items-center bg-[#0A0A0C] text-white">
       <div className="max-w-2xl w-full mx-auto px-4 lg:px-8">
         
         <motion.div 

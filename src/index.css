@@ -48,3 +48,8 @@ body {
     animation: none;
   }
 }
+
+/* In-app browsers: no rubber-band bounce at the page edges */
+html {
+  overscroll-behavior: none;
+}

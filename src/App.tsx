@@ -58,7 +58,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion="user">
-    <div className="bg-[#0A0A0C] min-h-screen text-white selection:bg-zinc-800 selection:text-white relative">
+    <div className="bg-[#0A0A0C] min-h-[calc(var(--sh,1vh)*100)] text-white selection:bg-zinc-800 selection:text-white relative">
       <GrainOverlay />
       <AnimatePresence>
         {showIntro && <Intro onComplete={finishIntro} />}

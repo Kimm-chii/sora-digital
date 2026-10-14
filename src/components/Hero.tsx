@@ -47,7 +47,7 @@ export function Hero() {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen min-h-[100dvh] h-screen h-[100dvh] flex flex-col overflow-hidden bg-[#0A0A0C]"
+      className="relative min-h-[calc(var(--sh,1vh)*100)] h-[calc(var(--sh,1vh)*100)] flex flex-col overflow-hidden bg-[#0A0A0C]"
     >
       {/* Background Image Moving Carousel / Slideshow */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
