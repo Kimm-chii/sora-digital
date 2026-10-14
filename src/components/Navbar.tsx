@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useEffect, useState, type MouseEvent } from 'react';
 import { siteContent } from '../data/content';
 import { scrollToSection } from '../utils/scroll';
-import { Menu, X } from 'lucide-react';
 import { BrandBlob } from './BrandBlob';
 
 export function Navbar() {
@@ -16,6 +15,19 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Escape closes the mobile menu
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setMobileMenuOpen(false);
+        document.getElementById('mobile-menu-toggle-button')?.focus();
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [mobileMenuOpen]);
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
@@ -119,17 +131,18 @@ export function Navbar() {
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            className={`md:hidden flex items-center justify-center w-9 h-9 transition-colors duration-200 focus:outline-none ${
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-nav-menu"
+            className={`md:hidden relative flex items-center justify-center w-10 h-10 -mr-2 transition-colors duration-200 focus:outline-none ${
               isScrolled || mobileMenuOpen
                 ? 'text-zinc-300 hover:text-white'
                 : 'text-zinc-300 hover:text-white drop-shadow-sm'
             }`}
           >
-            {mobileMenuOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
+            {/* three bars that turn into an X */}
+            <span className={`absolute h-[1.5px] w-5 bg-current transition-transform duration-300 ease-out motion-reduce:transition-none ${mobileMenuOpen ? 'rotate-45' : '-translate-y-[6px]'}`} />
+            <span className={`absolute h-[1.5px] w-5 bg-current transition-opacity duration-200 motion-reduce:transition-none ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+            <span className={`absolute h-[1.5px] w-5 bg-current transition-transform duration-300 ease-out motion-reduce:transition-none ${mobileMenuOpen ? '-rotate-45' : 'translate-y-[6px]'}`} />
           </button>
         </div>
       </motion.nav>
