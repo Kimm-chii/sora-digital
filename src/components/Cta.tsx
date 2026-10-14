@@ -13,7 +13,7 @@ export function Cta() {
   };
 
   return (
-    <section className="py-20 border-t border-zinc-900/80 bg-[#0A0A0C] text-center px-6">
+    <section className="py-16 sm:py-20 border-t border-zinc-900/80 bg-[#0A0A0C] text-center px-6">
       <div className="max-w-xl mx-auto space-y-5">
         <span className="text-[10px] font-mono tracking-[0.25em] text-[#81708F] uppercase">
           Start a Conversation

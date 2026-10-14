@@ -90,7 +90,7 @@ export const siteContent = {
   },
   footer: {
     text: "Where stories become interfaces, for brands, businesses, and the moments worth celebrating.",
-    disclaimer: "Bespoke Digital Experiences - Crafted with precision.",
+    disclaimer: "Bespoke digital experiences, crafted with precision.",
     socials: [
       { platform: "Instagram", link: "#" },
       { platform: "Twitter", link: "#" },

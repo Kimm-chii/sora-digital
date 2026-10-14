@@ -6,7 +6,7 @@ export function About() {
   const { about } = siteContent;
 
   return (
-    <section id="about" className="py-24 sm:py-32 relative bg-[#0A0A0C] overflow-hidden">
+    <section id="about" className="py-16 sm:py-32 relative bg-[#0A0A0C] overflow-hidden">
       {/* Elegant Ambient Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[600px] bg-[#81708F]/[0.02] rounded-full blur-[100px] pointer-events-none" />
       
@@ -78,7 +78,7 @@ export function About() {
         </motion.div>
 
         {/* Bottom Marker */}
-        <div className="mt-20 pt-8 border-t border-zinc-900 flex items-center justify-between text-zinc-500">
+        <div className="mt-12 sm:mt-20 pt-8 border-t border-zinc-900 flex items-center justify-between text-zinc-500">
           <span className="uppercase tracking-[0.2em] font-mono text-[9px]">
             SORA DIGITAL
           </span>

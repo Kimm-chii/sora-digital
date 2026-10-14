@@ -7,7 +7,7 @@ export function Portfolio() {
   const { portfolio } = siteContent;
 
   return (
-    <section id="portfolio" className="py-24 sm:py-32 bg-[#0E0E10] border-b border-zinc-900 overflow-hidden">
+    <section id="portfolio" className="py-16 sm:py-32 bg-[#0E0E10] border-b border-zinc-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ export function Portfolio() {
         </div>
 
         {/* Bottom Marker */}
-        <div className="mt-16 pt-8 border-t border-zinc-900/80 flex items-center justify-between text-xs text-zinc-500">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-zinc-900/80 flex items-center justify-between text-xs text-zinc-500">
           <span className="uppercase tracking-widest font-mono text-[10px]">
             SORA DIGITAL
           </span>

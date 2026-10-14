@@ -67,7 +67,7 @@ export function Hero() {
       </div>
 
       {/* Editorial Content Layer */}
-      <div className="relative z-10 w-full h-full flex flex-col justify-between px-6 sm:px-12 py-24 sm:py-28">
+      <div className="relative z-10 w-full h-full flex flex-col justify-between px-6 sm:px-12 pt-24 pb-[calc(2.5rem+env(safe-area-inset-bottom))] sm:py-28">
         
         {/* Top Edge Metadata */}
         <div className="flex justify-between items-start w-full">
@@ -122,12 +122,12 @@ export function Hero() {
             {(hero.subtitle || hero.credit) && (
               <div className="flex flex-col gap-2.5 mt-6 sm:mt-10 max-w-[280px] sm:max-w-sm border-l border-[#81708F]/30 pl-4">
                 {hero.subtitle && (
-                  <p className="text-zinc-300 text-[11px] sm:text-xs font-light leading-relaxed tracking-wide">
+                  <p className="text-zinc-200 text-[13px] sm:text-sm font-light leading-relaxed tracking-wide">
                     {hero.subtitle}
                   </p>
                 )}
                 {hero.credit && (
-                  <span className="text-[#81708F] font-mono text-[9px] sm:text-[10px] tracking-[0.25em] uppercase mb-4">
+                  <span className="text-[#b3a3c2] font-mono text-[10px] sm:text-[11px] tracking-[0.25em] uppercase mb-4">
                     {hero.credit}
                   </span>
                 )}
@@ -159,7 +159,7 @@ export function Hero() {
           >
             {/* Metadata list */}
             <div className="flex flex-col gap-2 text-zinc-500 font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-left sm:text-right">
-              <span className="text-zinc-300">EST. {new Date().getFullYear()}</span>
+              <span className="text-zinc-300">EST. 2026</span>
               <span>{memberCount} SERVICES</span>
               <span>DIGITAL AGENCY</span>
             </div>
