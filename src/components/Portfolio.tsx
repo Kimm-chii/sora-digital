@@ -16,7 +16,7 @@ export function Portfolio() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-12 sm:mb-16 md:mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-5">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide text-white mb-3 sm:mb-5" style={{ fontFamily: "'Outfit', sans-serif" }}>
             {portfolio.title}
           </h2>
           <p className="text-base sm:text-lg text-zinc-400 max-w-2xl">
@@ -56,10 +56,10 @@ export function Portfolio() {
                 transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
                 className="w-full lg:w-1/2 flex flex-col justify-center items-start"
               >
-                <span className="inline-block text-[#81708F] font-bold tracking-widest text-sm sm:text-base md:text-lg mb-2 sm:mb-3">
+                <span className="inline-block text-[#81708F] font-mono tracking-[0.25em] text-xs sm:text-sm mb-2 sm:mb-3">
                   {item.year}
                 </span>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-5">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light tracking-wide text-white mb-3 sm:mb-5" style={{ fontFamily: "'Outfit', sans-serif" }}>
                   {item.title}
                 </h3>
                 <p className="text-base sm:text-lg text-zinc-400 leading-relaxed mb-8">

@@ -142,7 +142,7 @@ export function Hero() {
                       scrollToSection(href);
                     }
                   }}
-                  className="inline-flex items-center justify-center bg-[#81708F]/10 border border-[#81708F]/40 text-[#81708F] px-6 py-3 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] hover:bg-[#81708F] hover:text-white transition-all w-fit"
+                  className="inline-flex items-center justify-center bg-[#0A0A0C]/70 backdrop-blur-sm border border-[#81708F]/70 text-zinc-100 px-6 py-3 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] hover:bg-[#81708F] hover:text-white transition-all w-fit"
                 >
                   Get Started
                 </a>

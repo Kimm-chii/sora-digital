@@ -36,31 +36,31 @@ export const siteContent = {
         id: 1,
         name: "Business Websites",
         role: "Corporate & Agency",
-        tags: ["💼 Case Studies", "📈 SEO", "Responsive"],
-        image: "/images/service_business_portfolio_1787208363012.jpg",
+        tags: ["Case Studies", "SEO", "Responsive"],
+        image: "/images/service_business_portfolio_1787208363012.webp",
         bio: "Sophisticated portfolios and corporate websites designed to showcase your agency's work, highlight your achievements, and attract high-tier clients."
       },
       {
         id: 2,
         name: "E-Commerce Websites",
         role: "Retail & Brands",
-        tags: ["🛒 Storefronts", "💳 Payments", "Shopify"],
-        image: "/images/service_ecommerce_site_1787208349510.jpg",
+        tags: ["Storefronts", "Payments", "Shopify"],
+        image: "/images/service_ecommerce_site_1787208349510.webp",
         bio: "Seamless shopping experiences that reflect your brand's quality and drive conversions with intuitive design."
       },
       {
         id: 3,
         name: "Landing Pages",
         role: "Campaign & Conversion",
-        tags: ["🚀 High Conversion", "✨ Bespoke UI", "Fast Loading"],
-        image: "/images/service_brand_identity_1787208297131.jpg",
+        tags: ["Conversion", "Bespoke UI", "Fast Loading"],
+        image: "/images/service_brand_identity_1787208297131.webp",
         bio: "Targeted, high-impact landing pages designed to capture attention, communicate value quickly, and drive user action."
       },
       {
         id: 4,
         name: "Wedding & Event Websites",
         role: "Personal Milestones",
-        tags: ["💍 Intro Animation", "✉️ Invitations", "RSVP"],
+        tags: ["Intro Animation", "Invitations", "RSVP"],
         image: "/images/service_wedding_web_1787208285576.webp",
         bio: "Elegant, personalized wedding websites complete with interactive intro animation, your story, and event details."
       }
@@ -83,13 +83,13 @@ export const siteContent = {
         year: "2026",
         title: "Bespoke Wedding Rings",
         description: "A luxury e-commerce experience for a bespoke ring designer, designed to elevate product presentation.",
-        image: "/images/project_bespoke_rings_1787208330543.jpg",
+        image: "/images/project_bespoke_rings_1787208330543.webp",
         link: "https://sora-bespoke.vercel.app/",
       }
     ],
   },
   footer: {
-    text: "Where stories become interfaces — for brands, businesses, and the moments worth celebrating.",
+    text: "Where stories become interfaces, for brands, businesses, and the moments worth celebrating.",
     disclaimer: "Bespoke Digital Experiences - Crafted with precision.",
     socials: [
       { platform: "Instagram", link: "#" },

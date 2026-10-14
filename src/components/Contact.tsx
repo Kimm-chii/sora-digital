@@ -87,7 +87,7 @@ export function Contact() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-1.5">
-                <label htmlFor="name" className="block text-[10px] font-mono tracking-widest text-zinc-400 uppercase">Your Name *</label>
+                <label htmlFor="name" className="block text-[11px] font-mono tracking-widest text-zinc-400 uppercase">Your Name *</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -95,18 +95,18 @@ export function Contact() {
                   required
                   pattern="[a-zA-Z.\s]+"
                   onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^a-zA-Z.\s]/g, '') }}
-                  className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
+                  className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-base sm:text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
                   placeholder="e.g. Alex Morgan"
                 />
               </div>
               <div className="space-y-1.5">
-                <label htmlFor="email" className="block text-[10px] font-mono tracking-widest text-zinc-400 uppercase">Email *</label>
+                <label htmlFor="email" className="block text-[11px] font-mono tracking-widest text-zinc-400 uppercase">Email *</label>
                 <input 
                   type="email" 
                   id="email" 
                   name="email"
                   required
-                  className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
+                  className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-base sm:text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
                   placeholder="e.g. alex@example.com"
                 />
               </div>
@@ -114,12 +114,12 @@ export function Contact() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-1.5">
-                <label htmlFor="phone" className="block text-[10px] font-mono tracking-widest text-zinc-400 uppercase">Phone</label>
+                <label htmlFor="phone" className="block text-[11px] font-mono tracking-widest text-zinc-400 uppercase">Phone</label>
                 <div className="flex items-end gap-2">
                   <select 
                     value={countryCode} 
                     onChange={(e) => setCountryCode(e.target.value as keyof typeof COUNTRY_DATA)}
-                    className="bg-transparent border-b border-zinc-800 pb-2 pt-1 text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors w-24 appearance-none"
+                    className="bg-transparent border-b border-zinc-800 pb-2 pt-1 text-base sm:text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors w-24 appearance-none"
                   >
                     {Object.entries(COUNTRY_DATA).map(([code, data]) => (
                       <option key={code} value={code} className="bg-[#0E0E10] text-white">
@@ -133,30 +133,30 @@ export function Contact() {
                     name="phone"
                     maxLength={COUNTRY_DATA[countryCode].max}
                     onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '') }}
-                    className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
+                    className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-base sm:text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors"
                     placeholder={`Max ${COUNTRY_DATA[countryCode].max} digits`}
                   />
                 </div>
               </div>
               <div className="space-y-1.5">
-                <label htmlFor="date" className="block text-[10px] font-mono tracking-widest text-zinc-400 uppercase">Wedding / Event Date</label>
+                <label htmlFor="date" className="block text-[11px] font-mono tracking-widest text-zinc-400 uppercase">Wedding / Event Date</label>
                 <input 
                   type="date" 
                   id="date"
                   name="wedding_date"
-                  className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors [&::-webkit-calendar-picker-indicator]:invert-[0.8]"
+                  className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-base sm:text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors [&::-webkit-calendar-picker-indicator]:invert-[0.8]"
                 />
               </div>
             </div>
 
             <div className="space-y-1.5">
-              <label htmlFor="project" className="block text-[10px] font-mono tracking-widest text-zinc-400 uppercase">Tell us about your project *</label>
+              <label htmlFor="project" className="block text-[11px] font-mono tracking-widest text-zinc-400 uppercase">Tell us about your project *</label>
               <textarea 
                 id="project" 
                 name="project_details"
                 required
                 rows={3}
-                className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors resize-none"
+                className="w-full bg-transparent border-b border-zinc-800 pb-2 pt-1 text-base sm:text-sm text-white font-light focus:outline-none focus:border-[#81708F] transition-colors resize-none"
                 placeholder="Share your vision..."
               />
             </div>

@@ -19,7 +19,8 @@ export function Intro({ onComplete }: IntroProps) {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, y: -20, filter: 'blur(10px)' }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0A0A0C]"
+      onClick={onComplete}
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0A0A0C] cursor-pointer"
     >
       <div className="flex flex-col items-center justify-center space-y-6">
         <motion.div
@@ -71,6 +72,14 @@ export function Intro({ onComplete }: IntroProps) {
           Welcome.
         </motion.p>
       </div>
+      <motion.span
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1.2 }}
+        className="absolute bottom-[calc(2rem+env(safe-area-inset-bottom))] text-[10px] font-mono tracking-[0.3em] uppercase text-zinc-600"
+      >
+        Tap to skip
+      </motion.span>
     </motion.div>
   );
 }

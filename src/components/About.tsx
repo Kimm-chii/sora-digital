@@ -23,7 +23,7 @@ export function About() {
             <div className="flex items-center gap-4 mb-8 sm:mb-12">
               <span className="w-8 h-[1px] bg-[#81708F]" />
               <h2 className="text-[10px] sm:text-xs font-mono tracking-[0.3em] text-[#81708F] uppercase">
-                About // Vision
+                About &amp; Vision
               </h2>
             </div>
 
